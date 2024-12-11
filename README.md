@@ -19,5 +19,4 @@
 
 ! gmx grompp -f md.mdp -c nvt.gro -t nvt.cpt -p topol.top -o p.tpr
 # объединение файлов в tpr
-! gmx mdrun -v 
-! запуск md
+! gmx mdrun -v
