@@ -3,7 +3,7 @@
 ## Генерируем файл топологии системы в силовом поле amber99sb-idln и файл с координатами в формате Gromacs
 
 ! gmx editconf -f  -o  -d 1.5
- #отступ в ячейке белка
+#отступ в ячейке белка
 ! gmx solvate -cp newbox.gro -cs spc216.gro -p topol.top -o solv.gro
  #добавление молекул растворителя
 ! gmx grompp -f ions.mdp -c solv.gro -p topol.top -o ions.tpr -maxwarn 1
