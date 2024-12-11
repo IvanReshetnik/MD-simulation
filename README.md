@@ -1,4 +1,15 @@
 # MD-simulation
+from pymol import cmd # pymol на минималках
+from IPython.display import Image
+cmd.reinitialize()
+cmd.load("1L2Y.pdb")
+cmd.select('state 1') # выбрать одно состояние, поскольку это ЯМР структура
+cmd.orient("1L2Y")
+cmd.ray(700)
+cmd.png("1L2Y.png")
+Image(filename = "1L2Y.png", unconfined=True)
+
+
 ! gmx pdb2gmx -f -o 
 # отступ в ячейке белка
 ! gmx editconf -f  -o  -d 1.5
